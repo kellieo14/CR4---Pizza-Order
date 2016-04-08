@@ -41,11 +41,20 @@ $(document).ready(function() {
     var newPizza = new Pizza(inputtedName, finalSize, finalTop, inputtedSize, inputtedTop);
     console.log(newPizza.Cost());
 
-    $(".size").append(newPizza.pizzaBig);
-    $(".name").append(newPizza.customerName);
-    $("ul#toppings").append("<li>" + newPizza.finTop + "</li>");
-    $(".cost").append("$" + newPizza.Cost());
+    $("ul#orders").append("<li><span class='order'>" + newPizza.customerName + "</span></li>");
 
+    $(".order").last().click(function() {
+      $("#show-order").show();
+      $("#show-order h2").text(newPizza.customerName);
+      $("ul#show-list").text("");
+      $("ul#show-cost").text("");
+      $("ul#show-list").append("<li>" + newPizza.pizzaBig + "</li>");
+      $("ul#show-list").append("<li>" + newPizza.finTop + "</li>");
+      $("ul#show-cost").append("<li>" + "$" + newPizza.Cost() + "</li>");
+
+    });
+
+    $("input#new-name").val("");
 
     });
   });

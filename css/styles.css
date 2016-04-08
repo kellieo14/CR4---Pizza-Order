@@ -35,6 +35,7 @@ img {
 }
 #show-order {
   margin-left: 20px;
+  display: none;
 }
 /*.cost {
   display: none;
