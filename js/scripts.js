@@ -32,6 +32,7 @@ $(document).ready(function() {
 
   $("form#new-order").submit(function(event) {
     event.preventDefault();
+    $("#slide").animate({width:'toggle'},500);
 
     var inputtedName = $("input#new-name").val();
     var finalSize = parseInt($("select.new-size option:selected").val());
@@ -39,20 +40,20 @@ $(document).ready(function() {
     var inputtedSize = $(this).find("select.new-size option:selected").text();
     var inputtedTop = $(this).find("select.new-top option:selected").text();
     var newPizza = new Pizza(inputtedName, finalSize, finalTop, inputtedSize, inputtedTop);
-    console.log(newPizza.Cost());
 
     $("ul#orders").append("<li><span class='order'>" + newPizza.customerName + "</span></li>");
 
     $(".order").last().click(function() {
+
       $("#show-order").show();
       $("#show-order h2").text(newPizza.customerName);
       $("ul#show-list").text("");
       $("ul#show-cost").text("");
       $("ul#show-list").append("<li>" + newPizza.pizzaBig + "</li>");
       $("ul#show-list").append("<li>" + newPizza.finTop + "</li>");
-      $("ul#show-cost").append("<li>" + "$" + newPizza.Cost() + "</li>");
-
+      $("ul#show-cost").append("<li>" + "Total Cost: " + "$" + newPizza.Cost() + "</li>");
     });
+
 
     $("input#new-name").val("");
 
