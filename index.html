@@ -20,7 +20,7 @@
           <form id="new-order">
             <div class="form-group">
               <label for="new-name">Enter your name here:</label>
-              <input id="new-name" type="text"></input>
+              <input id="new-name" type="text" required></input>
             </div>
 
             <div id="new-pizza">
@@ -32,9 +32,9 @@
                 <option id="size3" value="10">Large: 14"</option>
               </select>
 
-          
+              <div class="toppings">
               <h4>Select Your Topping</h4>
-              <select class="form-control new-topping">
+              <select class="form-control new-top">
                 <option id="topping1" value="2">Pepperoni</option>
                 <option id="topping2" value="2">Chicken</option>
                 <option id="topping3" value="2">Bacon</option>
@@ -47,7 +47,8 @@
                 <option id="topping10" value="1">Pineapple</option>
               </select>
             </div>
-            <span class="btn btn-primary" id="new-topping">Add Another Topping</button></span>
+            </div>
+            <span class="btn btn-primary" id="new-toppings">Add Another Topping</button></span>
             <button type="submit" name="button">Place Order</button>
           </form>
         </div>
@@ -60,7 +61,7 @@
             <p>Toppings:</p>
             <ul id="toppings">
             </ul>
-            <p>Total:<span class="cost"></span></p>
+            <p>Total: <span class="cost"></span></p>
           </div>
         </div>
     </div>
