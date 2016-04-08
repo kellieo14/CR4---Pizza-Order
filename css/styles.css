@@ -1,1 +1,41 @@
+body {
+  background-image: url("/Users/Guest/Desktop/Pizza-Order/background.jpg");
 
+  }
+
+header {
+  text-align:center;
+  background-color: black;
+  color:white;
+}
+
+.style {
+  background-color: white;
+  opacity: 0.9;
+}
+
+img {
+  max-width: 95%;
+}
+
+.style {
+  padding: 10px;
+}
+
+#new-toppings {
+  margin: 10px;
+}
+
+.bottom-style {
+  margin-top: 30px;
+  margin-left: -17px;
+  margin-right: -16px;
+  background-color: white;
+  opacity: 0.9;
+}
+#show-order {
+  margin-left: 20px;
+}
+/*.cost {
+  display: none;
+}*/

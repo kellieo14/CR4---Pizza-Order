@@ -15,55 +15,59 @@
         <header>
           <h1>Place Your Order:</h1>
         </header>
+        <div class="style">
+          <h3>Add an order:</h3>
+            <form id="new-order">
+              <div class="form-group">
+                <label for="new-name">Enter your name here:</label>
+                <input id="new-name" type="text" required></input>
+              </div>
 
-        <h3>Add an order:</h3>
-          <form id="new-order">
-            <div class="form-group">
-              <label for="new-name">Enter your name here:</label>
-              <input id="new-name" type="text" required></input>
-            </div>
+              <div id="new-pizza">
+                <h4>Select Your Size</h4>
+                <select class="form-control new-size">
+                  <option id="size1" value="4">Individual: 6"</option>
+                  <option id="size2" value="6">Small: 10"</option>
+                  <option id="size3" value="8">Medium: 12"</option>
+                  <option id="size3" value="10">Large: 14"</option>
+                </select>
 
-            <div id="new-pizza">
-              <h4>Select Your Size</h4>
-              <select class="form-control new-size">
-                <option id="size1" value="4">Individual: 6"</option>
-                <option id="size2" value="6">Small: 10"</option>
-                <option id="size3" value="8">Medium: 12"</option>
-                <option id="size3" value="10">Large: 14"</option>
-              </select>
-
-              <div class="toppings">
-              <h4>Select Your Topping</h4>
-              <select class="form-control new-top">
-                <option id="topping1" value="2">Pepperoni</option>
-                <option id="topping2" value="2">Chicken</option>
-                <option id="topping3" value="2">Bacon</option>
-                <option id="topping4" value="2">Sausage</option>
-                <option id="topping5" value="1">Sundried Tomatoes</option>
-                <option id="topping6" value="1">Peppers</option>
-                <option id="topping7" value="1">Cheese</option>
-                <option id="topping8" value="1">Olives</option>
-                <option id="topping9" value="1">Onions</option>
-                <option id="topping10" value="1">Pineapple</option>
-              </select>
-            </div>
-            </div>
-            <span class="btn btn-primary" id="new-toppings">Add Another Topping</button></span>
-            <button type="submit" name="button">Place Order</button>
-          </form>
-        </div>
-
-        <div class="row">
-          <div id="show-order">
-            <h2></h2>
-            <p>Name: <span class="name"></span></p>
-            <p>Size: <span class="size"></span></p>
-            <p>Toppings:</p>
-            <ul id="toppings">
-            </ul>
-            <p>Total: <span class="cost"></span></p>
+                <div class="toppings">
+                <h4>Select Your Topping</h4>
+                <select class="form-control new-top">
+                  <option id="topping1" value="2">Pepperoni  </option>
+                  <option id="topping2" value="2">Chicken  </option>
+                  <option id="topping3" value="2">Bacon  </option>
+                  <option id="topping4" value="2">Sausage  </option>
+                  <option id="topping5" value="1">Sundried Tomatoes</option>
+                  <option id="topping6" value="1">Peppers  </option>
+                  <option id="topping7" value="1">Cheese  </option>
+                  <option id="topping8" value="1">Olives  </option>
+                  <option id="topping9" value="1">Onions  </option>
+                  <option id="topping10" value="1">Pineapple  </option>
+                </select>
+              </div>
+              </div>
+              <span class="btn btn-primary" id="new-toppings">Add Another Topping</button></span>
+              <button type="submit" name="button">Place Order</button>
+            </form>
           </div>
         </div>
+        <div class="bottom-style">
+        <div class="row">
+          <div id="show-order">
+              <h2></h2>
+              <p>Name: <span class="name"></span></p>
+              <p>Size: <span class="size"></span></p>
+              <p>Toppings:</p>
+              <ul id="toppings">
+              </ul>
+              <p>Total: <span class="cost"></span></p>
+            </div>
+          </div>
+        </div>
+        <img id="board" src="img/board.png">
+        <img src="img/note.png">
     </div>
   </body>
 </html>
